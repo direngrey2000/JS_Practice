@@ -4,12 +4,20 @@ const title = document.querySelector("#title");
 //     console.log("I have been resized");
 // }
 
-function handleResize(event){
-    console.log(event);
+function handleClick(){
+    if (title.style.color ==  "blue")
+    {
+        title.style.color =  "white";
+    }
+    else
+    {
+        title.style.color =  "blue";
+    }
+    // console.log(event);
     // console.log("I have been resized");
 }
 
-window.addEventListener("resize",handleResize);
+title.addEventListener("click",handleClick);
 
 
 
