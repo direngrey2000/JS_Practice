@@ -4,15 +4,21 @@ const toDoForm = document.querySelector(".js-todoForm"),
     toDoList = document.querySelector(".js-toDoList");
 
 const TODOOS_LS = 'toDos';
+function filterFn(toDo){
+    return toDo.id === 1;
+}
 const toDos = [];
+
 
 function deleteToDo(event){
     // console.log(event.target.parentNode);
     // btn이 눌러져도, 부모가 누구인지 모르기 때문에, 어떤 버튼이 눌러졌는지 알 수가 없음. 
     // 그러한 이유로, 눌러진 버튼의 부모가 누군지 알아내야함. 
-    const btn = event.target.parentNode;
+    const btn = event.target;
     const li = btn.parentNode;
-    toDoList.removeChild(li)l
+    toDoList.removeChild(li);
+    const cleanToDos = toDos.filter(filterFn);
+    console.log(cleanToDos);
 }
 
 
