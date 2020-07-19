@@ -20,7 +20,7 @@ function deleteToDo(event){
     const cleanToDos = toDos.filter(function(todo){
         return toDo.id != parseInt(li.id);
     });
-    toDos = clea nToDos;
+    toDos = cleanToDos;
     saveToDos();
     // console.log(cleanToDos);
 }
