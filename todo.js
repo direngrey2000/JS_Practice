@@ -22,9 +22,7 @@ function deleteToDo(event){
     });
     toDos = cleanToDos;
     saveToDos();
-    // console.log(cleanToDos);
 }
-
 
 function saveToDos(){
     localStorage.setItem(TODOS_LS,JSON.stringify(toDos));
@@ -70,9 +68,6 @@ function loadToDos(){
         parsedToDos.forEach(function(toDo){
             paintToDo(toDo.text);
         })
-
-        
-
     }
 }
 
@@ -81,5 +76,5 @@ function init(){
     toDoForm.addEventListener("submit",handleSubmit)
 }
 
-
 init();
+
